@@ -2,13 +2,13 @@ import languages from "../../data/languages";
 import {useState} from 'react';
 
 function AppButtons() {
-    // const empty = {
-    //     id: 0,
-    //     title: "nessun linguaggio selezionato",
-    //     description: ""
-    //   };
+    const empty = {
+         id: null,
+         title: "nessun linguaggio selezionato",
+         description: ""
+    };
 
-    const [viewCard, setViewCard] = useState(languages[0]);
+    const [viewCard, setViewCard] = useState(empty);
     const [selectedCard, setSelectedCard] = useState(null);
 
     const handleClick = (curLanguage) => {

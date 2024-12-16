@@ -42,8 +42,12 @@ button {
     background-color: #ffc107;
 }
 
-button:hover {
+.blue-button:hover {
     background-color: #094fb9;
+}
+
+.yellow-button:hover {
+    background-color: #b68a06;
 }
 
 .card {
