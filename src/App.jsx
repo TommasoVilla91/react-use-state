@@ -1,4 +1,7 @@
+import AppButtons from "./components/AppButtons";
+
 function App() {
+
   
   return (
     <>
@@ -7,8 +10,12 @@ function App() {
       </header>
       <main>
         <section className="container">
-          <div className="row"></div>
-          <div className="card"></div>          
+          <div className="bnt-area">
+            <AppButtons />
+          </div>
+          <div className="card">
+            
+          </div>          
         </section>
       </main>
 

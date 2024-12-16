@@ -1,0 +1,39 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* LAYOUT */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    padding: 2rem;
+}
+
+/* MAIN */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    background-color: #0d6efd;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.card {
+    border: 1px solid lightslategray;
+}
