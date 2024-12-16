@@ -20,20 +20,39 @@ header {
 }
 
 /* MAIN */
-ul {
-    list-style: none;
+.row {
     display: flex;
     gap: 2rem;
 }
 
-li {
+button {
     border-radius: 10px;
     padding: 0.8rem 1rem;
-    background-color: #0d6efd;
     color: white;
     margin-bottom: 4rem;
+    cursor: pointer;
+    border: none;
+}
+
+.blue-button {
+    background-color: #0d6efd;
+}
+
+.yellow-button {
+    background-color: #ffc107;
+}
+
+button:hover {
+    background-color: #094fb9;
 }
 
 .card {
     border: 1px solid lightslategray;
+    border-radius: 10px;
+    padding: 1rem;
 }
+
+.card-title {
+    margin-bottom: 1rem;
+}
+
