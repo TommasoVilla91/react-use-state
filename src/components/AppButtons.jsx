@@ -2,27 +2,15 @@ import languages from "../../data/languages";
 import {useState} from 'react';
 
 function AppButtons() {
-    const empty = {
-         id: null,
-         title: "nessun linguaggio selezionato",
-         description: ""
-    };
-
-    const [viewCard, setViewCard] = useState(empty);
-    const [selectedCard, setSelectedCard] = useState(null);
-
-    const handleClick = (curLanguage) => {
-        setSelectedCard(curLanguage.id);
-        setViewCard(curLanguage);
-
-    }
     
+    const [selectedCard, setSelectedCard] = useState(null);
+       
     const printButtons = () => {
         return languages.map((curLanguage) => (
             <button 
-            className={selectedCard === curLanguage.id ? "yellow-button" : "blue-button"} 
+            className={selectedCard && curLanguage.id === selectedCard.id ? "yellow-button" : "blue-button"} 
             key={curLanguage.id} 
-            onClick={() => handleClick(curLanguage)}>
+            onClick={() => setSelectedCard(curLanguage)}>
                 {curLanguage.title}
             </button>
         ));
@@ -32,11 +20,19 @@ function AppButtons() {
         <>
             <div className="row">
                {printButtons()} 
-            </div>            
-            <div className="card">
-                <h1 className="card-title">{viewCard.title}</h1>
-                <p className="info">{viewCard.description}</p>
-            </div>            
+            </div>          
+                {
+                    selectedCard !== null ? (
+                        <div className="card">
+                            <h1 className="card-title">{selectedCard.title}</h1>
+                            <p className="info">{selectedCard.description}</p>
+                        </div>
+                    ) : (
+                        <div className="card">
+                           <p>Nessun linguaggio selezionato</p> 
+                        </div>                        
+                    )
+                }               
         </>
     );
 };
